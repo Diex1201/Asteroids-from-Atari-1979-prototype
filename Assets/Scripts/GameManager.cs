@@ -10,10 +10,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float _respawnTime = 3.0f;                  //время через которое корабль возродится
     [SerializeField] private float _respawnInvulnerabilityTime = 3.0f;  //время неуязвимости корабля
     public int _score = 0;
+    private int _maxScore;
 
     [SerializeField] private Text _currentScoreText;
     [SerializeField] private Text _recordScoreText;
     [SerializeField] private Text _currentLivesAmount;
+
+    [SerializeField] private GameObject _loseWindow;
 
     [SerializeField] private AudioSource _explosionSound;
     [SerializeField] private AudioSource _loseSound;
@@ -23,6 +26,12 @@ public class GameManager : MonoBehaviour
     {
         _currentScoreText.text = "Now : " + _score.ToString();
         _currentLivesAmount.text = _lives.ToString();
+
+        if(PlayerPrefs.GetInt("_maxScore") < _score)
+        {
+            PlayerPrefs.SetInt("_maxScore", _score);
+        }
+        _recordScoreText.text = "Best Score : " + PlayerPrefs.GetInt("_maxScore").ToString();
     }
 
     public void AsteroidDestroyed(AsteroidController asteroid)
@@ -68,6 +77,8 @@ public class GameManager : MonoBehaviour
     {
         _loseSound.Play();
         Time.timeScale = 0;
+        FindObjectOfType<NloController>().GetComponent<AudioSource>().Stop();
         _recordScoreText.text = "Recored : " + _score.ToString();
+        _loseWindow.SetActive(true);
     }
 }

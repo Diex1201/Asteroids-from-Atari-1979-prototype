@@ -23,8 +23,12 @@ public class PlayerShootController : MonoBehaviour
             case Shooter.Player:
                 if (Input.GetMouseButtonDown(0))
                 {
-                    ShootGoOn();
-                    _shootSound.Play();
+                    if (_timeBtwnShoot <= 0)
+                    {
+                        ShootGoOn();
+                        _shootSound.Play();
+                    }
+                    else _timeBtwnShoot -= Time.deltaTime;
                 }
                 break;
 
@@ -33,7 +37,6 @@ public class PlayerShootController : MonoBehaviour
                     if (_timeBtwnShoot <= 0)
                     {
                         ShootGoOn();
-                       // _shootSound.Play();
                         _timeBtwnShoot = _startTimeBtwnShoot;
                     }
                     else _timeBtwnShoot -= Time.deltaTime;

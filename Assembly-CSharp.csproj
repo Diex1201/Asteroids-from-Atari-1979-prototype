@@ -71,6 +71,8 @@
     <Compile Include="Assets\Scripts\PlayerShootController.cs" />
     <Compile Include="Assets\Scripts\BoundaryAsteroidTransferController.cs" />
     <Compile Include="Assets\Scripts\BulletBehavior.cs" />
+    <Compile Include="Assets\Scripts\MenuController.cs" />
+    <Compile Include="Assets\Scripts\LoseControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

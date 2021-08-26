@@ -21,7 +21,9 @@ public class NloController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        FindObjectOfType<NloSpawner>()._isAlive = false;
         this.gameObject.tag = "Finish";
+        GetComponent<AudioSource>().Stop();
         FindObjectOfType<GameManager>().NLODestroyed();
         _anim.SetTrigger("Crashed");
         Destroy(gameObject, 1.1f);

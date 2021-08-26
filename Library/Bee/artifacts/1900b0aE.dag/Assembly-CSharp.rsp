@@ -347,6 +347,8 @@
 "Assets/Scripts/BulletBehavior.cs"
 "Assets/Scripts/CrashedScript.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/LoseControl.cs"
+"Assets/Scripts/MenuController.cs"
 "Assets/Scripts/NloController.cs"
 "Assets/Scripts/NloSpawner.cs"
 "Assets/Scripts/PlayerHealth.cs"
