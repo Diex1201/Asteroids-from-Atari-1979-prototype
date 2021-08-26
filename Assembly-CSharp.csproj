@@ -62,14 +62,15 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\CrashedScript.cs" />
     <Compile Include="Assets\Scripts\AsteroidController.cs" />
+    <Compile Include="Assets\Scripts\ShootPointNLORotation.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\NloController.cs" />
+    <Compile Include="Assets\Scripts\NloSpawner.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\AsteroidSpawner.cs" />
     <Compile Include="Assets\Scripts\PlayerShootController.cs" />
     <Compile Include="Assets\Scripts\BoundaryAsteroidTransferController.cs" />
     <Compile Include="Assets\Scripts\BulletBehavior.cs" />
-    <Compile Include="Assets\Scripts\NloSpawner.cs" />
-    <Compile Include="Assets\Scripts\NloController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

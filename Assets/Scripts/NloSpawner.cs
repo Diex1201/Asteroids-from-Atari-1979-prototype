@@ -4,23 +4,30 @@ using UnityEngine;
 
 public class NloSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _nloSpawnPoints;
-    public Transform _currentSpawnPoint;
     [SerializeField] private GameObject _nloPrefab;
     void Start()
     {
-        Invoke(nameof(SpawnNLO), 2);
+        Invoke(nameof(SpawnNLO), Random.Range(20, 40));
     }
 
-   
     void Update()
     {
-        
+        Invoke(nameof(StartCheckingStatus), 40);
     }
     public void SpawnNLO()
     {
-        int num = Random.Range(0, _nloSpawnPoints.Length - 1);
-        _currentSpawnPoint = _nloSpawnPoints[num].transform;
-        GameObject _currentNLO = Instantiate(_nloPrefab, _currentSpawnPoint.position, transform.rotation);
+        if (GameObject.FindGameObjectWithTag("NLO") == null)
+        {
+            Vector3 _spawnPointPos = new Vector3(-10, Random.Range(-2.5f, 2.5f), 0);
+            GameObject _currentNLO = Instantiate(_nloPrefab, _spawnPointPos, transform.rotation);
+        }
+    }
+
+    public void StartCheckingStatus()
+    {
+        if (GameObject.FindGameObjectWithTag("NLO") == null)
+        {
+            Invoke(nameof(SpawnNLO), Random.Range(20, 40));
+        }
     }
 }

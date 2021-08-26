@@ -33,6 +33,11 @@ public class GameManager : MonoBehaviour
         else if(asteroid._asteroidSize >= 1.85f) _score += 20;
     }
 
+    public void NLODestroyed()
+    {
+        _score += 200;
+    }
+
     public void PlayerDied()
     {
         _explosionSound.Play();

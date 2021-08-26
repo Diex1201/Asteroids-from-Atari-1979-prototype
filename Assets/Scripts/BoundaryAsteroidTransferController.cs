@@ -16,6 +16,10 @@ public class BoundaryAsteroidTransferController : MonoBehaviour
             collision.transform.position = new Vector3(transform.position.x * -0.9f, transform.position.y * -0.9f, 0);
         }
 
+        if (this.gameObject.layer == LayerMask.NameToLayer("Boundary") && collision.gameObject.tag == "NLO")
+        {
+            collision.transform.position = new Vector3(transform.position.x * -0.9f, transform.position.y * -0.9f, 0);
+        }
     }
 
     
