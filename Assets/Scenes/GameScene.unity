@@ -204,7 +204,6 @@ GameObject:
   - component: {fileID: 101987045}
   - component: {fileID: 101987047}
   - component: {fileID: 101987046}
-  - component: {fileID: 101987048}
   m_Layer: 7
   m_Name: BoundaryRightForPlayer
   m_TagString: Untagged
@@ -264,18 +263,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.386087, y: 0.44547608}
   m_EdgeRadius: 0
---- !u!114 &101987048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 101987044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5cd5bc3012ec64a949e086b3ba87e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &169781691
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +274,6 @@ GameObject:
   - component: {fileID: 169781692}
   - component: {fileID: 169781694}
   - component: {fileID: 169781693}
-  - component: {fileID: 169781695}
   m_Layer: 7
   m_Name: BoundaryUpForPlayer
   m_TagString: Untagged
@@ -347,18 +333,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20.201454, y: 0.49152565}
   m_EdgeRadius: 0
---- !u!114 &169781695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169781691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5cd5bc3012ec64a949e086b3ba87e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &330936041
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,7 +706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -40.07}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.29155958}
-  m_AnchoredPosition: {x: 5.2, y: 51.9}
+  m_AnchoredPosition: {x: 5.199997, y: 51.9}
   m_SizeDelta: {x: 0, y: -2.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &449328543
@@ -2407,7 +2381,6 @@ GameObject:
   - component: {fileID: 2058777207}
   - component: {fileID: 2058777209}
   - component: {fileID: 2058777208}
-  - component: {fileID: 2058777210}
   m_Layer: 7
   m_Name: BoundaryLeftForPlayer
   m_TagString: Untagged
@@ -2467,18 +2440,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.499947, y: 0.44547608}
   m_EdgeRadius: 0
---- !u!114 &2058777210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058777206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b5cd5bc3012ec64a949e086b3ba87e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2080572707
 GameObject:
   m_ObjectHideFlags: 0
